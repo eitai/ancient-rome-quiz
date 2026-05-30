@@ -1,0 +1,19 @@
+{
+  "name": "dazn-home-assignment",
+  "version": "1.0.0",
+  "description": "A timed multiple-choice quiz application about Ancient Rome, built with React and Node.js.",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "npm install --prefix frontend && npm install --prefix backend",
+    "dev": "concurrently --names \"backend,frontend\" --prefix-colors \"yellow,cyan\" \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "dev:backend": "npm run dev --prefix backend"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "playwright": "^1.60.0"
+  }
+}
