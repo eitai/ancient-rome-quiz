@@ -8,10 +8,6 @@ import { QuizScreen } from './components/QuizScreen/QuizScreen';
 import { ResultScreen } from './components/ResultScreen';
 import { LeaderboardScreen } from './components/LeaderboardScreen';
 
-const BACKGROUND_STYLE = {
-  background: 'radial-gradient(ellipse at top, #2D0A50 0%, #1A0A2E 50%, #0D0618 100%)',
-};
-
 export const App = () => {
   const { phase, startQuiz, resetQuiz } = useQuizStore();
   const [showLeaderboard, setShowLeaderboard] = useState(false);
@@ -33,14 +29,8 @@ export const App = () => {
   };
 
   return (
-    <div className='min-h-screen relative overflow-hidden' style={BACKGROUND_STYLE}>
-      <div
-        className='absolute inset-0 pointer-events-none'
-        style={{
-          backgroundImage:
-            'radial-gradient(circle at 20% 20%, rgba(74,16,128,0.3) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(45,10,80,0.2) 0%, transparent 50%)',
-        }}
-      />
+    <div className='app-bg min-h-screen relative overflow-hidden'>
+      <div className='app-bg-overlay absolute inset-0 pointer-events-none' />
 
       <AnimatePresence mode='wait'>
         {showLeaderboard && (

@@ -14,6 +14,22 @@
   --marble: #f5f0e8;
   --marble-dark: #e8e0d0;
   --stone: #8b7355;
+
+  --bg-gradient: radial-gradient(ellipse at top, #2d0a50 0%, #1a0a2e 50%, #0d0618 100%);
+  --bg-overlay-gradient: radial-gradient(
+      circle at 20% 20%,
+      rgba(74, 16, 128, 0.3) 0%,
+      transparent 50%
+    ),
+    radial-gradient(circle at 80% 80%, rgba(45, 10, 80, 0.2) 0%, transparent 50%);
+}
+
+.app-bg {
+  background: var(--bg-gradient);
+}
+
+.app-bg-overlay {
+  background-image: var(--bg-overlay-gradient);
 }
 
 body {
